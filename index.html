@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flip card profile</title>
+    <script src="https://kit.fontawesome.com/b1e689214e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b1e689214e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Josefin+Sans:wght@100&family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #161623;
+
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  width: 300px;
+  height: 70vh;
+    z-index: 99;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-front{
+    border-radius: 12px;
+}
+#leftball{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-bottom-right-radius: 100%;
+    background-image: linear-gradient(to right, #f2709c, #ff9472);
+}
+#rightball{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 30%;
+    bottom: 20%;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  box-shadow: inset 150px 270px 270px rgba(255, 255, 255, 0.15);
+  color: black;
+}
+
+.flip-card-front img{
+    width: 160px;
+    height: 160px;
+}
+
+.flip-card-front h1{
+    margin-top: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Girassol', cursive;
+}
+.flip-card-front p{
+    width: 250px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Girassol', cursive;
+    font-family: 'Pangolin', cursive;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.flip-card-front a{
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Girassol', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Pangolin', cursive;
+    background-image: linear-gradient(to right, #f857a6, #ff5858);
+    border: 1px solid black;
+
+}
+.links{
+    margin-top: 40px;
+}
+.links i{
+    width: 40px;
+    height: 40px;
+    background-color: #f8c291;
+    margin-right: 2%;
+    margin-left: 2%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    padding-top: 11px;
+}
+/* Style the back side */
+.flip-card-back {
+  box-shadow: inset 150px 270px 270px rgba(255, 255, 255, 0.15);
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 12px;
+}
+.flip-card-back h1{
+    margin-top: 20px;
+    font-family: 'Concert One', cursive;
+}
+.flip-card-back .star{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+.flip-card-back h2{
+    margin-top: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.flip-card-back p{
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#dh{
+    color: #55efc4;
+}
+#dh2{
+    color: #ff7675;
+}
+    </style>
+</head>
+<body>
+<div id="leftball"></div>
+<div class="content">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+        <h1>PROFILE</h1>
+        <img src="logo.png" alt="Avatar">
+        <p>Hii! Dhruv here.I am a web developer and programmer.this is a flip animation effect.</p>
+        <a href="#">Welcome</a>
+        <div class="links">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-github"></i>
+        </div>
+    </div>
+    <div class="flip-card-back">
+      <h1>Ratings</h1>
+      <div class="star">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star fa-2x"></i>
+            <i class="fas fa-star-half-alt fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+      </div>
+      <h2>Languages Used:-</h2>
+      <p id="dh">HTML,CSS,JAVASCRIPT</p>
+      <h2>UIC Code</h2>
+      <p id="dh2">9586XXXXXXXXX</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="rightball"></div>
+</body>
+</html>
